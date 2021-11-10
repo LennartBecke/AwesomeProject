@@ -1,7 +1,7 @@
 const myBaragraph = document.querySelector('p');
 myBaragraph.textContent = "Hello world!";
 console.log("Text gesetzt");
-
+   
 if (true) {
     var x = 5;
 }
