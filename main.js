@@ -33,6 +33,7 @@ var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
 console.log(car.myCar);
 console.log(car.getCar);
 console.log(car.special);
+console.log(car.special);
 
 let myButton = document.querySelector('button');
 let myParagraph = document.querySelector('p');
