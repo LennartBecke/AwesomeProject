@@ -1,3 +1,0 @@
-# AwesomeProject
-Hello there
-Hallooo
