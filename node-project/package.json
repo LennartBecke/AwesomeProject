@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LennartBecke/AwesomeProject/issues"
   },
-  "homepage": "https://github.com/LennartBecke/AwesomeProject#readme"
+  "homepage": "https://github.com/LennartBecke/AwesomeProject#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
