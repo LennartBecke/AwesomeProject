@@ -7,9 +7,9 @@ interface IPerson {
 
 const Person = ({ firstName, secondName }: IPerson) => {
     return (
-        <div>
+        <h1>
             {firstName} {secondName}
-        </div>
+        </h1>
     );
 };
 
