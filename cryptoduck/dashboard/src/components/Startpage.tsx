@@ -21,6 +21,7 @@ import { mainListItems, secondaryListItems } from "./listItems";
 import Chart from "./Chart";
 import Deposits from "./Deposits";
 import Orders from "./Orders";
+import Button from '@mui/material/Button';
 
 function Copyright(props: any) {
   return (
@@ -173,15 +174,28 @@ function DashboardContent() {
               noWrap
               sx={{
               alignItems: "center",
-              ml: 49
+              mt: 10,
+              ml: 50
               }}
             >
               Find your Crypto
             </Typography>
 
-            <button type="button" id="startbutton">Start Now</button>
+            <Typography
+              component="h1"
+              variant="h5"
+              color="inherit"
+              noWrap
+              sx={{
+              alignItems: "center",
+              mt: 4,
+              ml: 65
+              }}
+            >
+              <Button variant="contained">Start Now</Button>
+            </Typography>
 
-            <Copyright sx={{ pt: 4 }} />
+            <Copyright sx={{ pt: 4, mt: 40}} />
           </Container>
         </Box>
       </Box>
