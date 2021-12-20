@@ -122,18 +122,16 @@ function DashboardContent() {
             </IconButton>
             <Typography
               component="h1"
-              variant="h6"
+              variant="h5"
               color="inherit"
               noWrap
-              sx={{ flexGrow: 1 }}
+              sx={{
+              alignItems: "center",
+              ml: 70
+              }}
             >
               Cryptoduckk
             </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -196,7 +194,7 @@ function DashboardContent() {
                 </Paper>
               </Grid>
               {/* Recent Orders */}
-              <Grid item xs={10}>
+              <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                   <Orders />
                 </Paper>
