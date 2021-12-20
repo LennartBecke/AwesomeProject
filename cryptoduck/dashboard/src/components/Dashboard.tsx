@@ -30,7 +30,7 @@ function Copyright(props: any) {
       align="center"
       {...props}
     >
-      {"Copyright © "}
+      {"Copyright Cryptoduckk © "}
       <Link color="inherit" href="https://mui.com/">
         Your Website
       </Link>{" "}
@@ -196,7 +196,7 @@ function DashboardContent() {
                 </Paper>
               </Grid>
               {/* Recent Orders */}
-              <Grid item xs={12}>
+              <Grid item xs={10}>
                 <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                   <Orders />
                 </Paper>
