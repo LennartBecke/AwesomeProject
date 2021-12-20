@@ -130,7 +130,7 @@ function DashboardContent() {
               ml: 70
               }}
             >
-              Cryptoduckk
+              Cryptoduckk Startpage
             </Typography>
           </Toolbar>
         </AppBar>
