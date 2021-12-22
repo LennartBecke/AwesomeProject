@@ -197,11 +197,7 @@ function DashboardContent() {
           }}>
                     <Paper>
                         <h1>Question 01:</h1>
-                        Are you new to the Crypto world? <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
+                        Are you new to the Crypto world?
                     </Paper>
             </Grid>
           </span>
