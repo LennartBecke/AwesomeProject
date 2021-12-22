@@ -23,6 +23,10 @@ import Chart from "./Chart";
 import Deposits from "./Deposits";
 import Orders from "./Orders";
 
+import Main from "./Main"
+
+import { Routes, Route } from "react-router-dom";
+
 function Copyright(props: any) {
   
   return (
@@ -167,34 +171,10 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-             
-          <Typography
-              component="h1"
-              variant="h3"
-              color="inherit"
-              noWrap
-              sx={{
-              alignItems: "center",
-              mt: 10,
-              ml: 50
-              }}
-            >
-              Find your Crypto
-            </Typography>
 
-            <Typography
-              component="h1"
-              variant="h5"
-              color="inherit"
-              noWrap
-              sx={{
-              alignItems: "center",
-              mt: 4,
-              ml: 65
-              }}
-            >
-              <Button variant="contained">Start Now</Button>
-            </Typography>
+          <Routes>
+            <Route path="/" element={<Main />} />
+          </Routes>
 
             <Copyright sx={{ pt: 4, mt: 40}} />
           </Container>

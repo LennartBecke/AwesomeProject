@@ -47,9 +47,14 @@ function Copyright(props: any) {
 }
 
 const steps = [
-  'Crypto Question 01',
-  'Crypto Question 02',
-  'Crypto Question 03',
+  'Step 01',
+  'Step 02',
+  'Step 03',
+  'Step 04',
+  'Step 05',
+  'Step 06',
+  'Step 07',
+  'Step 08'
 ];
 
 const drawerWidth: number = 240;
@@ -178,15 +183,20 @@ function DashboardContent() {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
 
-          <Stepper activeStep={0} alternativeLabel>{steps.map((label) => (<Step key={label}><StepLabel>{label}</StepLabel></Step>))}</Stepper>
+          <Stepper activeStep={0} alternativeLabel sx={{
+            mt: 10
+            }}>
+            {steps.map((label) => (<Step key={label}><StepLabel>{label}</StepLabel></Step>))}
+          </Stepper>
 
           <span>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{
             height: 300,
-            mt: 20,
+            mt: 5,
             padding: 5
           }}>
                     <Paper>
+                        <h1>Question 01:</h1>
                         Are you new to the Crypto world? <br></br>
                         <br></br>
                         <br></br>
@@ -197,7 +207,7 @@ function DashboardContent() {
           </span>
 
 
-            <Copyright sx={{ pt: 4, mt: 40}} />
+            <Copyright sx={{ pt: 4, mt: 30}} />
           </Container>
         </Box>
       </Box>

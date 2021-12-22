@@ -1,12 +1,11 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Startpage from "./components/Startpage";
 import Dashboard from "./components/Dashboard";
-import Question_01 from "./components/Question_01";
+import Startpage from "./components/Startpage";
 
 function App() {
-  return <Question_01 />;
+  return <Startpage />;
 }
 
 export default App;
