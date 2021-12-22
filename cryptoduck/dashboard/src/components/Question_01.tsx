@@ -23,6 +23,10 @@ import Chart from "./Chart";
 import Deposits from "./Deposits";
 import Orders from "./Orders";
 
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+
 function Copyright(props: any) {
   
   return (
@@ -41,6 +45,12 @@ function Copyright(props: any) {
     </Typography>
   );
 }
+
+const steps = [
+  'Crypto Question 01',
+  'Crypto Question 02',
+  'Crypto Question 03',
+];
 
 const drawerWidth: number = 240;
 
@@ -132,7 +142,7 @@ function DashboardContent() {
               ml: 65
               }}
             >
-              Cryptoduckk Startpage
+              Cryptoduckk Question 01
             </Typography>
           </Toolbar>
         </AppBar>
@@ -167,34 +177,25 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-             
-          <Typography
-              component="h1"
-              variant="h3"
-              color="inherit"
-              noWrap
-              sx={{
-              alignItems: "center",
-              mt: 10,
-              ml: 50
-              }}
-            >
-              Find your Crypto
-            </Typography>
 
-            <Typography
-              component="h1"
-              variant="h5"
-              color="inherit"
-              noWrap
-              sx={{
-              alignItems: "center",
-              mt: 4,
-              ml: 65
-              }}
-            >
-              <Button variant="contained">Start Now</Button>
-            </Typography>
+          <Stepper activeStep={0} alternativeLabel>{steps.map((label) => (<Step key={label}><StepLabel>{label}</StepLabel></Step>))}</Stepper>
+
+          <span>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{
+            height: 300,
+            mt: 20,
+            padding: 5
+          }}>
+                    <Paper>
+                        Are you new to the Crypto world? <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                    </Paper>
+            </Grid>
+          </span>
+
 
             <Copyright sx={{ pt: 4, mt: 40}} />
           </Container>
