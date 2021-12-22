@@ -199,8 +199,12 @@ function DashboardContent() {
                         <h1>Question 01:</h1>
                         Are you new to the Crypto world?
                     </Paper>
+                    <button>
+                      Hallo
+                    </button>
             </Grid>
           </span>
+
 
 
             <Copyright sx={{ pt: 4, mt: 30}} />
