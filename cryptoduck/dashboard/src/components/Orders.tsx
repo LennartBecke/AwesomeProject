@@ -22,37 +22,37 @@ const rows = [
   createData(
     0,
     "Binance",
-    "Click Here",
-    "Tupelo, MS",
-    "VISA ⠀•••• 3719"
+    "Register on Binance",
+    "200 Mio. Members",
+    "9,5/10"
   ),
   createData(
     1,
     "Coinbase",
-    "Paul McCartney",
-    "London, UK",
-    "VISA ⠀•••• 2574"
+    "Register on Coinbase",
+    "150 Mio. Members",
+    "9/10"
   ),
   createData(
     2,
     "Crypto.com",
-    "Tom Scholz",
-    "Boston, MA",
-    "MC ⠀•••• 1253"
+    "Register on Crypto.com",
+    "110 Mio. Members",
+    "9/10"
   ),
   createData(
     3,
     "Bitpanda",
-    "Michael Jackson",
-    "Gary, IN",
-    "AMEX ⠀•••• 2000"
+    "Register on Bitpanda",
+    "20 Mio. Members",
+    "8,9/10"
   ),
   createData(
     4,
     "KuCoin",
-    "Bruce Springsteen",
-    "Long Branch, NJ",
-    "VISA ⠀•••• 5919"
+    "Register on KuCoin",
+    "18 Mio. Members",
+    "7,5/10"
   ),
 ];
 
@@ -67,10 +67,10 @@ export default function Orders() {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell> </TableCell>
-            <TableCell> </TableCell>
-            <TableCell> </TableCell>
-            <TableCell> </TableCell>
+            <TableCell>Companies</TableCell>
+            <TableCell>Click to register</TableCell>
+            <TableCell>Members Total</TableCell>
+            <TableCell>Cryptoduckk Rating</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
