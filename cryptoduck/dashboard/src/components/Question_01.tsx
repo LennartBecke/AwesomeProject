@@ -42,7 +42,6 @@ export function BasicButtons() {
 }
 
 function Copyright(props: any) {
-  
   return (
     <Typography
       variant="body2"
