@@ -1,6 +1,6 @@
 import * as React from "react";
 import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
-import Button from '@mui/material/Button';
+
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
@@ -26,6 +26,20 @@ import Orders from "./Orders";
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
+
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+
+
+export function BasicButtons() {
+  return (
+    <Stack spacing={2} direction="row">
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
+    </Stack>
+  );
+}
 
 function Copyright(props: any) {
   
@@ -200,7 +214,6 @@ function DashboardContent() {
                     </button>
             </Grid>
           </span>
-
 
 
             <Copyright sx={{ pt: 4, mt: 30}} />
