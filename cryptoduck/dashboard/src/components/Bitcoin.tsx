@@ -17,10 +17,13 @@ import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+
 import { mainListItems, secondaryListItems } from "./listItems";
 import Chart from "./Chart";
-import Bitcoin_Info from "./Bitcoin_Info";
+
 import Orders from "./Orders";
+
+import Bitcoin_Info from "./Bitcoin_Info";
 
 function Copyright(props: any) {
   return (
@@ -130,7 +133,7 @@ function DashboardContent() {
               ml: 70
               }}
             >
-              Cryptoduckk
+              Cryptoduckk Bitcoinpage
             </Typography>
           </Toolbar>
         </AppBar>
@@ -179,21 +182,21 @@ function DashboardContent() {
                   <Chart />
                 </Paper>
               </Grid>
-              {/* Recent Deposits */}
+              {/* Bitcoin Info */}
               <Grid item xs={12} md={4} lg={3}>
                 <Paper
                   sx={{
                     p: 2,
                     display: "flex",
                     flexDirection: "column",
-                    height: 240,
+                    height: 640,
                   }}
                 >
                   <Bitcoin_Info />
                 </Paper>
               </Grid>
               {/* Recent Orders */}
-              <Grid item xs={12}>
+              <Grid item xs={12} md={4} lg={6}>
                 <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                   <Orders />
                 </Paper>
@@ -206,6 +209,8 @@ function DashboardContent() {
     </ThemeProvider>
   );
 }
+
+
 
 export default function Dashboard() {
   return <DashboardContent />;

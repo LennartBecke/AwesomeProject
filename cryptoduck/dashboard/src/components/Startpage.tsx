@@ -20,7 +20,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
 import Chart from "./Chart";
-import Deposits from "./Deposits";
+import Bitcoin_Info from "./Bitcoin_Info";
 import Orders from "./Orders";
 
 import Main from "./Main"
