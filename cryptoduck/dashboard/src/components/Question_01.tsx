@@ -30,6 +30,8 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 
+import { spacing } from '@mui/system';
+
 
 function Copyright(props: any) {
   return (
@@ -198,9 +200,24 @@ function DashboardContent() {
                         <h1>Question 01:</h1>
                         Are you new to the Crypto world?
                     </Paper>
+                    <div style={{marginTop: "15px"}}>
                     <button>
-                      Hallo
+                      Yes
                     </button>
+
+                    <button style={{marginLeft: "10px"}}>
+                      No
+                    </button>
+
+                    <button style={{marginLeft: "10px"}}>
+                      I am an expert
+                    </button>
+
+                    <button style={{marginLeft: "10px"}}>
+                      I know a little bit
+                    </button>
+
+                    </div>
             </Grid>
           </span>
 
