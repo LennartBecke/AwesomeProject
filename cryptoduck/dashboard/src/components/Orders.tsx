@@ -13,52 +13,46 @@ function createData(
   date: string,
   name: string,
   shipTo: string,
-  paymentMethod: string,
-  amount: number
+  paymentMethod: string
 ) {
-  return { id, date, name, shipTo, paymentMethod, amount };
+  return { id, date, name, shipTo, paymentMethod };
 }
 
 const rows = [
   createData(
     0,
-    "16 Mar, 2019",
-    "Elvis Presley",
+    "Binance",
+    "Click Here",
     "Tupelo, MS",
-    "VISA ⠀•••• 3719",
-    312.44
+    "VISA ⠀•••• 3719"
   ),
   createData(
     1,
-    "16 Mar, 2019",
+    "Coinbase",
     "Paul McCartney",
     "London, UK",
-    "VISA ⠀•••• 2574",
-    866.99
+    "VISA ⠀•••• 2574"
   ),
   createData(
     2,
-    "16 Mar, 2019",
+    "Crypto.com",
     "Tom Scholz",
     "Boston, MA",
-    "MC ⠀•••• 1253",
-    100.81
+    "MC ⠀•••• 1253"
   ),
   createData(
     3,
-    "16 Mar, 2019",
+    "Bitpanda",
     "Michael Jackson",
     "Gary, IN",
-    "AMEX ⠀•••• 2000",
-    654.39
+    "AMEX ⠀•••• 2000"
   ),
   createData(
     4,
-    "15 Mar, 2019",
+    "KuCoin",
     "Bruce Springsteen",
     "Long Branch, NJ",
-    "VISA ⠀•••• 5919",
-    212.79
+    "VISA ⠀•••• 5919"
   ),
 ];
 
@@ -73,11 +67,10 @@ export default function Orders() {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Date</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Ship To</TableCell>
-            <TableCell>Payment Method</TableCell>
-            <TableCell align="right">Sale Amount</TableCell>
+            <TableCell> </TableCell>
+            <TableCell> </TableCell>
+            <TableCell> </TableCell>
+            <TableCell> </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -87,13 +80,12 @@ export default function Orders() {
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.shipTo}</TableCell>
               <TableCell>{row.paymentMethod}</TableCell>
-              <TableCell align="right">{`$${row.amount}`}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
       <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
-        See more orders
+        See more marketplaces
       </Link>
     </React.Fragment>
   );
