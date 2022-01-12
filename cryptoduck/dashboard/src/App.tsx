@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Startpage from "./components/Startpage";
+import Question_01 from "./components/Question_01";
 
 function App() {
-  return <Startpage />;
+  return <Question_01 />;
 }
 
 export default App;
