@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Bitcoin from "./components/Bitcoin";
+import Chart_Try from "./components/Chart_Try";
 
 function App() {
-  return <Bitcoin />;
+  return <Chart_Try />;
 }
 
 export default App;
