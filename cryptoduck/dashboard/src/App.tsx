@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Chart_Try from "./components/Chart_Try";
+import Startpage from "./components/Startpage";
 
 function App() {
-  return <Chart_Try />;
+  return <Startpage />;
 }
 
 export default App;
