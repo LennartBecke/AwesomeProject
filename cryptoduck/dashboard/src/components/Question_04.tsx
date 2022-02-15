@@ -19,9 +19,9 @@ const steps = [
     'Step 04'
 ];
 
-export const Question_01=() => (
+export const Question_04=() => (
     <>
-    <Stepper activeStep={0} alternativeLabel sx={{
+    <Stepper activeStep={3} alternativeLabel sx={{
     mt: 10
     }}>
     {steps.map((label) => (<Step key={label}><StepLabel>{label}</StepLabel></Step>))}
@@ -33,13 +33,13 @@ export const Question_01=() => (
             mt: 4,
             padding: 5
           }}>
-                    <Paper sx={{
-                      height: 250,
-                      padding: 3
-                      }}>
-                        <h1>Question 01:</h1>
-                        Are you new to the Crypto world?
-                    </Paper>
+                <Paper sx={{
+                    height: 250,
+                    padding: 3
+                    }}>
+                    <h1>Question 04:</h1>
+                    How long do you want to invest?
+                </Paper>
             </Grid>
         </span>
         <Typography
@@ -52,24 +52,25 @@ export const Question_01=() => (
             ml: 5
             }}
             >
-            <Link to="/Question_02" style={{textDecoration:"none"}}><Button variant="contained" sx={{
+            <Link to="/CroToken" style={{textDecoration:"none"}}><Button variant="contained" sx={{
             ml: 0
-            }}>Yes</Button></Link>
+            }}>Short term</Button></Link>
 
-            <Link to="/Question_02" style={{textDecoration:"none"}}><Button variant="contained" sx={{
+            <Link to="/Ethereum" style={{textDecoration:"none"}}><Button variant="contained" sx={{
             ml: 1
-            }}>No</Button></Link>
+            }}>Mid term</Button></Link>
 
-            <Link to="/Question_02" style={{textDecoration:"none"}}><Button variant="contained" sx={{
+            <Link to="/Bitcoin" style={{textDecoration:"none"}}><Button variant="contained" sx={{
             ml: 1
-            }}>I am an expert</Button></Link>
+            }}>Long term</Button></Link>
 
-            <Link to="/Question_02" style={{textDecoration:"none"}}><Button variant="contained" sx={{
+            <Link to="/SatoshiMadness" style={{textDecoration:"none"}}><Button variant="contained" sx={{
             ml: 1
-            }}>I know a little bit</Button></Link>
-
+            }}>Get rich fast button</Button></Link>
         </Typography>
     </>
 )
 
-export default Question_01; 
+export default Question_04; 
+
+

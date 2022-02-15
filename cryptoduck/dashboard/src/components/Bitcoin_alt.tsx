@@ -1,6 +1,5 @@
 import * as React from "react";
 import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
-import Button from '@mui/material/Button';
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
@@ -18,27 +17,16 @@ import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+
 import { mainListItems, secondaryListItems } from "./listItems";
 import Chart from "./Chart";
-import Bitcoin_Info from "./Bitcoin_Info";
+
 import Orders from "./Orders";
 
-import Main from "./Main"
-import Question_01 from "./Question_01";
-import Question_02 from "./Question_02";
-import Question_03 from "./Question_03";
-import Question_04 from "./Question_04";
-import Bitcoin from "./Bitcoin";
-import Ethereum from "./Ethereum";
-import SatoshiMadness from "./SatoshiMadness";
-import CroToken from "./CroToken";
-
-import { Routes, Route } from "react-router-dom";
+import Bitcoin_Info from "./Bitcoin_Info";
 
 function Copyright(props: any) {
-  
   return (
-    
     <Typography
       variant="body2"
       color="text.secondary"
@@ -46,8 +34,8 @@ function Copyright(props: any) {
       {...props}
     >
       {"Copyright Cryptoduckk © "}
-      <Link color="inherit" href="https://cryptoduckk-8dad9.web.app/">
-        Cryptoduckk
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -105,7 +93,6 @@ const Drawer = styled(MuiDrawer, {
   },
 }));
 
-
 const mdTheme = createTheme();
 
 function DashboardContent() {
@@ -122,7 +109,7 @@ function DashboardContent() {
           <Toolbar
             sx={{
               pr: "24px", // keep right padding when drawer closed
-            }} // npm i react-router-dom && npm i @types/react-router-dom
+            }}
           >
             <IconButton
               edge="start"
@@ -130,28 +117,24 @@ function DashboardContent() {
               aria-label="open drawer"
               onClick={toggleDrawer}
               sx={{
-                marginRight: "45px",
+                marginRight: "36px",
                 ...(open && { display: "none" }),
               }}
             >
               <MenuIcon />
             </IconButton>
-
-            <Link color="inherit" href="https://cryptoduckk-8dad9.web.app/" style={{textDecoration:"none"}}>
-              <Typography
-                component="h1"
-                variant="h5"
-                color="inherit"
-                noWrap
-                sx={{
-                alignItems: "center",
-                ml: 3
-                }}
-                >
-                Cryptoduckk
-              </Typography>
-            </Link>
-            
+            <Typography
+              component="h1"
+              variant="h5"
+              color="inherit"
+              noWrap
+              sx={{
+              alignItems: "center",
+              ml: 70
+              }}
+            >
+              Cryptoduckk Bitcoinpage
+            </Typography>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -184,29 +167,57 @@ function DashboardContent() {
           }}
         >
           <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 0.5, mb: 5, ml:0 }}>
 
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/Question_01" element={<Question_01 />} />
-            <Route path="/Question_02" element={<Question_02 />} />
-            <Route path="/Question_03" element={<Question_03 />} />
-            <Route path="/Question_04" element={<Question_04 />} />
-            <Route path="/Bitcoin" element={<Bitcoin />} />
-            <Route path="/Ethereum" element={<Ethereum />} />
-            <Route path="/SatoshiMadness" element={<SatoshiMadness />} />
-            <Route path="/CroToken" element={<CroToken />} />
-          </Routes>
+          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+            <Grid container spacing={3}>
+              {/* Chart */}
 
-            <Copyright sx={{ pt: 4, mt: 40}} />
+              <Grid item xs={12} md={8} lg={9}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    height: 240,
+                  }}
+                >
+                  <Chart />
+                </Paper>
+              </Grid>
+
+              {/* Bitcoin Info */}
+              <Grid item xs={12} md={8} lg={9}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    height: 440,
+                  }}
+                >
+                  <Bitcoin_Info />
+                </Paper>
+              </Grid>
+
+              {/* Recent Orders (Marketplaces) */}
+              <Grid item xs={12} md={8} lg={9}>
+                <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+                  <Orders />
+                </Paper>
+              </Grid>
+            </Grid>
+            <Copyright sx={{ pt: 4 }} />
           </Container>
+
+
         </Box>
       </Box>
     </ThemeProvider>
   );
 }
 
+
+
 export default function Dashboard() {
   return <DashboardContent />;
 }
-

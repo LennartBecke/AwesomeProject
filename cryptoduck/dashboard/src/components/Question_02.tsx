@@ -19,9 +19,9 @@ const steps = [
     'Step 04'
 ];
 
-export const Question_01=() => (
+export const Question_02=() => (
     <>
-    <Stepper activeStep={0} alternativeLabel sx={{
+    <Stepper activeStep={1} alternativeLabel sx={{
     mt: 10
     }}>
     {steps.map((label) => (<Step key={label}><StepLabel>{label}</StepLabel></Step>))}
@@ -37,8 +37,10 @@ export const Question_01=() => (
                       height: 250,
                       padding: 3
                       }}>
-                        <h1>Question 01:</h1>
-                        Are you new to the Crypto world?
+                        <h1>Question 02:</h1>
+                        How would you describe your personality? <br></br>
+                        <p> </p>
+                        I am...
                     </Paper>
             </Grid>
         </span>
@@ -52,24 +54,30 @@ export const Question_01=() => (
             ml: 5
             }}
             >
-            <Link to="/Question_02" style={{textDecoration:"none"}}><Button variant="contained" sx={{
+            <Link to="/Question_03" style={{textDecoration:"none"}}><Button variant="contained" sx={{
             ml: 0
-            }}>Yes</Button></Link>
+            }}>Risky</Button></Link>
 
-            <Link to="/Question_02" style={{textDecoration:"none"}}><Button variant="contained" sx={{
+            <Link to="/Question_03" style={{textDecoration:"none"}}><Button variant="contained" sx={{
             ml: 1
-            }}>No</Button></Link>
+            }}>Patient</Button></Link>
 
-            <Link to="/Question_02" style={{textDecoration:"none"}}><Button variant="contained" sx={{
+            <Link to="/Question_03" style={{textDecoration:"none"}}><Button variant="contained" sx={{
             ml: 1
-            }}>I am an expert</Button></Link>
+            }}>Impatient</Button></Link>
 
-            <Link to="/Question_02" style={{textDecoration:"none"}}><Button variant="contained" sx={{
+            <Link to="/Question_03" style={{textDecoration:"none"}}><Button variant="contained" sx={{
             ml: 1
-            }}>I know a little bit</Button></Link>
+            }}>Thinker</Button></Link>
+
+            <Link to="/Question_03" style={{textDecoration:"none"}}><Button variant="contained" sx={{
+            ml: 1
+            }}>Spontaneous</Button></Link>
 
         </Typography>
     </>
 )
 
-export default Question_01; 
+export default Question_02; 
+
+

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
-import Button from '@mui/material/Button';
+
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
@@ -23,22 +23,18 @@ import Chart from "./Chart";
 import Bitcoin_Info from "./Bitcoin_Info";
 import Orders from "./Orders";
 
-import Main from "./Main"
-import Question_01 from "./Question_01";
-import Question_02 from "./Question_02";
-import Question_03 from "./Question_03";
-import Question_04 from "./Question_04";
-import Bitcoin from "./Bitcoin";
-import Ethereum from "./Ethereum";
-import SatoshiMadness from "./SatoshiMadness";
-import CroToken from "./CroToken";
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
 
-import { Routes, Route } from "react-router-dom";
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+
+import { spacing, typography } from '@mui/system';
+
 
 function Copyright(props: any) {
-  
   return (
-    
     <Typography
       variant="body2"
       color="text.secondary"
@@ -46,14 +42,21 @@ function Copyright(props: any) {
       {...props}
     >
       {"Copyright Cryptoduckk © "}
-      <Link color="inherit" href="https://cryptoduckk-8dad9.web.app/">
-        Cryptoduckk
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
   );
 }
+
+const steps = [
+  'Step 01',
+  'Step 02',
+  'Step 03',
+  'Step 04'
+];
 
 const drawerWidth: number = 240;
 
@@ -105,7 +108,6 @@ const Drawer = styled(MuiDrawer, {
   },
 }));
 
-
 const mdTheme = createTheme();
 
 function DashboardContent() {
@@ -130,28 +132,24 @@ function DashboardContent() {
               aria-label="open drawer"
               onClick={toggleDrawer}
               sx={{
-                marginRight: "45px",
+                marginRight: "36px",
                 ...(open && { display: "none" }),
               }}
             >
               <MenuIcon />
             </IconButton>
-
-            <Link color="inherit" href="https://cryptoduckk-8dad9.web.app/" style={{textDecoration:"none"}}>
-              <Typography
-                component="h1"
-                variant="h5"
-                color="inherit"
-                noWrap
-                sx={{
-                alignItems: "center",
-                ml: 3
-                }}
-                >
-                Cryptoduckk
-              </Typography>
-            </Link>
-            
+            <Typography
+              component="h1"
+              variant="h5"
+              color="inherit"
+              noWrap
+              sx={{
+              alignItems: "center",
+              ml: 65
+              }}
+            >
+              Cryptoduckk Question 01
+            </Typography>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -184,21 +182,50 @@ function DashboardContent() {
           }}
         >
           <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 0.5, mb: 5, ml:0 }}>
+          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
 
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/Question_01" element={<Question_01 />} />
-            <Route path="/Question_02" element={<Question_02 />} />
-            <Route path="/Question_03" element={<Question_03 />} />
-            <Route path="/Question_04" element={<Question_04 />} />
-            <Route path="/Bitcoin" element={<Bitcoin />} />
-            <Route path="/Ethereum" element={<Ethereum />} />
-            <Route path="/SatoshiMadness" element={<SatoshiMadness />} />
-            <Route path="/CroToken" element={<CroToken />} />
-          </Routes>
+          <Stepper activeStep={0} alternativeLabel sx={{
+            mt: 10
+            }}>
+            {steps.map((label) => (<Step key={label}><StepLabel>{label}</StepLabel></Step>))}
+          </Stepper>
 
-            <Copyright sx={{ pt: 4, mt: 40}} />
+          <span>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{
+            height: 300,
+            mt: 4,
+            padding: 5
+          }}>
+                    <Paper sx={{
+                      height: 250,
+                      padding: 3
+                      }}>
+                        <h1>Question 01:</h1>
+                        Are you new to the Crypto world?
+                    </Paper>
+                    <div style={{marginTop: "15px"}}>
+                    <button>
+                      Yes
+                    </button>
+
+                      <button style={{marginLeft: "10px"}}>
+                        No
+                      </button>
+
+                    <button style={{marginLeft: "10px"}}>
+                      I am an expert
+                    </button>
+
+                    <button style={{marginLeft: "10px"}}>
+                      I know a little bit
+                    </button>
+
+                    </div>
+            </Grid>
+          </span>
+
+
+            <Copyright sx={{ pt: 4, mt: 30}} />
           </Container>
         </Box>
       </Box>
@@ -209,4 +236,3 @@ function DashboardContent() {
 export default function Dashboard() {
   return <DashboardContent />;
 }
-
