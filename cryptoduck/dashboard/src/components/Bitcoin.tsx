@@ -12,7 +12,6 @@ import Orders from "./Orders";
 import Bitcoin_Info from "./Bitcoin_Info";
 
 
-
 export const Bitcoin=() => (
     <>
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
