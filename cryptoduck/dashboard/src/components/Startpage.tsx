@@ -137,7 +137,7 @@ function DashboardContent() {
               <MenuIcon />
             </IconButton>
 
-            <Link color="inherit" href="https://cryptoduckk-8dad9.web.app/" style={{textDecoration:"none"}}>
+            <Link color="inherit" href="https://cryptoduckk.com" style={{textDecoration:"none"}}>
               <Typography
                 component="h1"
                 variant="h5"
