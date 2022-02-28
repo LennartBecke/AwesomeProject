@@ -15,6 +15,130 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 
 
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
+
+import { styled } from '@mui/material/styles';
+
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+
+export  function SimpleSnackbar() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <Button variant="contained" color="secondary" size="small" onClick={handleClose}>
+        UNDO
+      </Button>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
+
+  return (
+    <div>
+      <Button onClick={handleClick}>Open simple snackbar</Button>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message="Note archived"
+        action={action}
+      />
+    </div>
+  );
+}
+
+const Root = styled('div')(({ theme }) => ({
+  width: '100%',
+  ...theme.typography.body2,
+  '& > :not(style) + :not(style)': {
+    marginTop: theme.spacing(2),
+  },
+}));
+
+
+
+export function DividerText() {
+  const content = (
+    <div>
+      {` `}
+    </div>
+  );
+
+  return (
+    <Root>
+      <Divider>
+        <Chip label="Cryptoduckk" />
+      </Divider>
+      {content}
+    </Root>
+  );
+}
+
+
+export function MiddleDividers() {
+  return (
+    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <Box sx={{ my: 3, mx: 2 }}>
+        <Grid container alignItems="center">
+          <Grid item xs>
+            <Typography gutterBottom variant="h4" component="div">
+              Toothbrush
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography gutterBottom variant="h6" component="div">
+              $4.50
+            </Typography>
+          </Grid>
+        </Grid>
+        <Typography color="text.secondary" variant="body2">
+          Pinstriped cornflower blue cotton blouse takes you on a walk to the park or
+          just down the hall.
+        </Typography>
+      </Box>
+      <Divider variant="middle" />
+      <Box sx={{ m: 2 }}>
+        <Typography gutterBottom variant="body1">
+          Select type
+        </Typography>
+        <Stack direction="row" spacing={1}>
+          <Chip label="Extra Soft" />
+          <Chip color="primary" label="Soft" />
+          <Chip label="Medium" />
+          <Chip label="Hard" />
+        </Stack>
+      </Box>
+      <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
+        <Button>Add to cart</Button>
+      </Box>
+    </Box>
+  );
+}
+
+
 export function BasicRating() {
   const [value, setValue] = React.useState<number | null>(2);
 
@@ -69,12 +193,31 @@ export const Main=() => (
                 mt: 0,
                 padding: 5
             }}>
+              <DividerText></DividerText>
+                </Grid>
+        </span>
+
+        <span>
+                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{
+                height: 100,
+                mt: 0,
+                padding: 5
+            }}>
                     <Paper sx={{
                         height: 100,
                         padding: 3
                         }}>
 
                     </Paper>
+                </Grid>
+        </span>
+        <span>
+                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{
+                height: 100,
+                mt: 0,
+                padding: 5
+            }}>
+              <button><SimpleSnackbar></SimpleSnackbar></button>
                 </Grid>
         </span>
 
@@ -96,10 +239,8 @@ export const Main=() => (
                     </Paper>
                 </Grid>
         </span>
-        
-        
 
-
+        
     </>
 )
 
